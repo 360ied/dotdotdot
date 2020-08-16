@@ -1,11 +1,11 @@
-package main
+package utils
 
 import (
 	"fmt"
 	"net/http"
 )
 
-func keepalive() {
+func KeepAlive() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		_, err := fmt.Fprintf(w, "I'm alive")
 

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"dotdotdot/utils"
 	"fmt"
 	"github.com/bwmarrin/discordgo"
 	"os"
@@ -9,7 +10,7 @@ import (
 
 func main() {
 	// so that repl won't exit after the page is closed
-	go keepalive()
+	go utils.KeepAlive()
 
 	bot, err := discordgo.New("Bot " + os.Getenv("token"))
 
